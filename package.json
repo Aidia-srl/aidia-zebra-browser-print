@@ -11,9 +11,6 @@
         "test": "jest --config jestconfig.json"
     },
     "dependencies": {},
-    "publishConfig": {
-        "@AlessandroSoci:registry": "https://npm.pkg.github.com"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Aidia-srl/zebra-browser-print-wrapper.git"
@@ -28,7 +25,7 @@
     "files": [
         "src/**/*"
     ],
-    "author": "Luismar Hilario",
+    "author": "Aidia SRL",
     "license": "GPL-3.0",
     "bugs": {
         "url": "https://github.com/Aidia-srl/zebra-browser-print-wrapper/issues"
