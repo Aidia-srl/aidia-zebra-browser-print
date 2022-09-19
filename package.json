@@ -2,8 +2,8 @@
     "name": "zebra-browser-print-wrapper",
     "version": "0.1.2",
     "description": "Zebra Browser Print Javascript Wrapper",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "src/index.js",
+    "types": "src/index.d.ts",
     "scripts": {
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\"",
@@ -23,7 +23,7 @@
         "barcode"
     ],
     "files": [
-        "lib/**/*"
+        "src/**/*"
     ],
     "author": "Luismar Hilario",
     "license": "GPL-3.0",
