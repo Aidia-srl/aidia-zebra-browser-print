@@ -1,6 +1,6 @@
 {
-    "name": "zebra-browser-print-wrapper",
-    "version": "0.1.2",
+    "name": "aidia-zebra-browser-print",
+    "version": "0.1.3",
     "description": "Zebra Browser Print Javascript Wrapper",
     "main": "src/index.js",
     "types": "src/index.d.ts",
@@ -11,6 +11,9 @@
         "test": "jest --config jestconfig.json"
     },
     "dependencies": {},
+    "publishConfig": {
+        "@AlessandroSoci:registry": "https://npm.pkg.github.com"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Aidia-srl/zebra-browser-print-wrapper.git"
