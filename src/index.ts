@@ -25,7 +25,7 @@ export default class ZebraBrowserPrintWrapper {
       }
 
       return new Error('No printers available');
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   };
@@ -66,7 +66,7 @@ export default class ZebraBrowserPrintWrapper {
       }
 
       throw new Error("There's no default printer");
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   };
@@ -81,12 +81,12 @@ export default class ZebraBrowserPrintWrapper {
 
   cleanUpString = (str: string): string => {
     const arr = str.split(':');
-    const result = arr[1].trim();
+    const result = arr.slice(1).join(":").trim();
     return result;
   };
 
   checkPrinterStatus = async () => {
-    await this.write('~HQES');
+    await this.write('~hs');
     const result = await this.read();
 
     const errors = [];
@@ -161,7 +161,7 @@ export default class ZebraBrowserPrintWrapper {
       };
 
       await fetch(endpoint, config);
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   };
@@ -185,7 +185,7 @@ export default class ZebraBrowserPrintWrapper {
       const res = await fetch(endpoint, config);
       const data = await res.text();
       return data;
-    } catch (error) {
+    } catch (error:any ) {
       throw new Error(error);
     }
   };
@@ -193,7 +193,7 @@ export default class ZebraBrowserPrintWrapper {
   print = async (text: string) => {
     try {
       await this.write(text);
-    } catch (error) {
+    } catch (error: any) {
       throw new Error(error);
     }
   };
