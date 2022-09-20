@@ -89,7 +89,7 @@ export default class ZebraBrowserPrintWrapper {
     await this.write('~hs');
     const result = await this.read();
 
-    const errors = [];
+    const errors: Array<string> = [];
     let isReadyToPrint = false;
 
     const isError = result.charAt(70);

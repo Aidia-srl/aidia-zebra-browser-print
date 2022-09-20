@@ -1,36 +1,16 @@
 {
     "name": "aidia-zebra-browser-print",
-    "version": "0.1.5",
-    "description": "Zebra Browser Print Javascript Wrapper",
-    "main": "src/index.js",
-    "types": "src/index.d.ts",
+    "version": "0.1.6",
+    "description": "Zebra Browser Print Typescript by Aidia",
+    "main": "index.js",
     "scripts": {
-        "build": "tsc",
-        "format": "prettier --write \"src/**/*.ts\"",
-        "lint": "tslint -p tsconfig.json",
-        "test": "jest --config jestconfig.json"
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint": "tslint -p tsconfig.json"
     },
-    "dependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Aidia-srl/zebra-browser-print-wrapper.git"
-    },
-    "keywords": [
-        "zpl",
-        "zebra",
-        "zebra programming language",
-        "zebra printers",
-        "barcode"
-    ],
-    "files": [
-        "src/**/*"
-    ],
     "author": "Aidia SRL",
     "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/Aidia-srl/zebra-browser-print-wrapper/issues"
-    },
-    "homepage": "https://github.com/Aidia-srl/zebra-browser-print-wrapper#readme",
+    "dependencies": {},
     "devDependencies": {
         "@types/jest": "^26.0.23",
         "jest": "^27.0.4",
@@ -40,5 +20,21 @@
         "tslint": "^6.1.3",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "^4.3.2"
-    }
+    },
+    "keywords": [
+        "zpl",
+        "zebra",
+        "zebra programming language",
+        "zebra printers",
+        "barcode",
+        "browser print"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aidia-srl/aidia-zebra-browser-print.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Aidia-srl/aidia-zebra-browser-print/issues"
+    },
+    "homepage": "https://github.com/Aidia-srl/aidia-zebra-browser-printr#readme"
 }
