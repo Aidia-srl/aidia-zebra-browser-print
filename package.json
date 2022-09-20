@@ -1,6 +1,6 @@
 {
   "name": "aidia-zebra-browser-print",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Zebra Browser Print Typescript by Aidia",
   "main": "lib/index.ts",
   "types": "lib/index.d.ts",
