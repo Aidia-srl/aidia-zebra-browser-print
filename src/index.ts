@@ -20,7 +20,13 @@ export default class ZebraBrowserPrintWrapper {
 
       const data = await res.json();
 
-      if (data && data !== undefined && data.printer && data.printer !== undefined && data.printer.length > 0) {
+      if (
+        data &&
+        data !== undefined &&
+        data.printer &&
+        data.printer !== undefined &&
+        data.printer.length > 0
+      ) {
         return data.printer;
       }
 
@@ -44,7 +50,12 @@ export default class ZebraBrowserPrintWrapper {
       const res = await fetch(endpoint, config);
       const data = await res.text();
 
-      if (data && data !== undefined && typeof data !== 'object' && data.split('\n\t').length === 7) {
+      if (
+        data &&
+        data !== undefined &&
+        typeof data !== 'object' &&
+        data.split('\n\t').length === 7
+      ) {
         const deviceRaw = data.split('\n\t');
 
         const name = this.cleanUpString(deviceRaw[1]);
@@ -81,7 +92,7 @@ export default class ZebraBrowserPrintWrapper {
 
   cleanUpString = (str: string): string => {
     const arr = str.split(':');
-    const result = arr.slice(1).join(":").trim();
+    const result = arr.slice(1).join(':').trim();
     return result;
   };
 
@@ -89,7 +100,7 @@ export default class ZebraBrowserPrintWrapper {
     await this.write('~hs');
     const result = await this.read();
 
-    const errors: Array<string> = [];
+    const errors: string[] = [];
     let isReadyToPrint = false;
 
     const isError = result.charAt(70);
@@ -135,7 +146,8 @@ export default class ZebraBrowserPrintWrapper {
 
     if (pause === '1') errors.push('Printer Paused');
 
-    if (!isReadyToPrint && errors.length === 0) errors.push('Error: Unknown Error');
+    if (!isReadyToPrint && errors.length === 0)
+      errors.push('Error: Unknown Error');
 
     return {
       isReadyToPrint,
@@ -185,7 +197,7 @@ export default class ZebraBrowserPrintWrapper {
       const res = await fetch(endpoint, config);
       const data = await res.text();
       return data;
-    } catch (error:any ) {
+    } catch (error: any) {
       throw new Error(error);
     }
   };
