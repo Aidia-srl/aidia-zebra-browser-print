@@ -8,6 +8,9 @@
         "format:write": "prettier --write .",
         "lint": "tslint -p tsconfig.json"
     },
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com"
+    },
     "author": "Aidia SRL",
     "license": "GPL-3.0",
     "dependencies": {},
