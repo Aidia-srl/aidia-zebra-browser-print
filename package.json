@@ -1,12 +1,18 @@
 {
   "name": "aidia-zebra-browser-print",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Zebra Browser Print Typescript by Aidia",
-  "main": "index.ts",
+  "main": "lib/index.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "author": "Aidia SRL",
   "license": "MIT",
