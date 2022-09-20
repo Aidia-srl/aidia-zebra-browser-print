@@ -7,13 +7,13 @@ This package is a wrapper for the [Zebra Browser Print](https://www.zebra.com/la
 Install the module in your project via YARN
 
 ```bash
-yarn add zebra-browser-print-wrapper
+yarn add aidia-zebra-browser-print
 ```
 
 Or NPM
 
 ```bash
-npm i zebra-browser-print-wrapper
+npm i aidia-zebra-browser-print
 ```
 
 
@@ -72,7 +72,7 @@ You can use this method with simple text or add a string using the [ZPL language
 
 ```js
 // Import the zebra-browser-prit-wrapper package
-const  ZebraBrowserPrintWrapper = require('zebra-browser-print-wrapper');
+const  ZebraBrowserPrintWrapper = require('aidia-zebra-browser-print');
 
 const printBarcode = async (serial) => {
     try {
