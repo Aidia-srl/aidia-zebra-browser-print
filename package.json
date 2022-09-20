@@ -1,8 +1,8 @@
 {
     "name": "aidia-zebra-browser-print",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "description": "Zebra Browser Print Typescript by Aidia",
-    "main": "index.js",
+    "main": "index.ts",
     "scripts": {
         "format:check": "prettier --check .",
         "format:write": "prettier --write .",
