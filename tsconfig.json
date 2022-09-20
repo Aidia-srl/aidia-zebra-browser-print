@@ -2,11 +2,7 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "declaration": true,
-        "outDir": "./lib",
-        "strict": true,
         "lib": [ "es2015", "DOM" ]
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__tests__/*"]
+    "exclude": ["node_modules", ".github", ".gitignore", ".prettier"]
 }
